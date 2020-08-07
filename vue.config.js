@@ -29,8 +29,5 @@ module.exports = {
                 path.resolve(__dirname, "./src/assets/css/common.less")
             ]
         }
-    },
-    global: {
-        'THREE': true
     }
 }
