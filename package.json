@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "element-ui": "^2.13.2",
     "less": "^3.11.1",
     "less-loader": "^6.1.0",
     "vue": "^2.6.11",
@@ -38,7 +39,36 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "indent": [
+        "error",
+        4,
+        {
+          "SwitchCase": 1,
+          "VariableDeclarator": 1,
+          "outerIIFEBody": 1,
+          "FunctionDeclaration": {
+            "parameters": 1,
+            "body": 1
+          },
+          "FunctionExpression": {
+            "parameters": 1,
+            "body": 1
+          },
+          "CallExpression": {
+            "arguments": 1
+          },
+          "ArrayExpression": 1,
+          "ObjectExpression": 1,
+          "ImportDeclaration": 1,
+          "flatTernaryExpressions": false,
+          "ignoredNodes": ["JSXElement", "JSXElement *"]
+        }
+      ]
+    },
+    "globals":{
+      "$": true
+    }
   },
   "browserslist": [
     "> 1%",

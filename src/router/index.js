@@ -1,29 +1,29 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import Main from '@/pages/main.vue';
-import routes from './routes';
+import Vue from 'vue'
+import Router from 'vue-router'
 
-Vue.use(Router);
+Vue.use(Router)
 
-let RouterMenus = new Router({
+const RouterMenus = new Router({
     routes: [
         {
-            path: '/Main',
-            name: 'Main',
-            redirect: '/Main/home',
-            component: Main,
-            children: routes
+            path: '/home',
+            name: 'home',
+            component: () => import('@/pages/home.vue'),
+            meta: {
+                name: '首页',
+                icon: 'el-icon-info'
+            }
         },
         {
             path: '/',
-            redirect: '/Main/home'
-        },
+            redirect: '/home'
+        }
     ]
-});
+})
 
 RouterMenus.beforeEach(function (to, from, next) {
     // store.commit('cancelRequest/clearToken'); // 取消请求
-    next();
-});
+    next()
+})
 
-export default RouterMenus;
+export default RouterMenus
