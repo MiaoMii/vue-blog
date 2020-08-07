@@ -1,0 +1,193 @@
+/*********************************************************************
+ * base style less file
+ * Created by syn on 2019/12/09
+ *********************************************************************/
+/* 变量 ---start--- */
+
+/* 变量 ---end--- */
+
+/* 屏幕media query宽度 ---start--- */
+@scBig: 1920px;
+@scMiddle: 1600px;
+@scSmall: 1366px;
+
+/* px换算vh / vw */
+.conversion(@px, @prop) when (@prop = width) {
+    @{prop}: ((@px * 100)/ 1920vw)
+}
+
+.conversion(@px, @prop) when (@prop = height) {
+    @{prop}: ((@px * 100)/ 946vh)
+}
+
+.conversion(@px, @prop) when (@prop = line-height) {
+    @{prop}: ((@px * 100)/ 946vh)
+}
+
+/* 缩放 */
+.scale() {
+  @media screen and (max-device-width: 1920px) {
+    transform: scale(1);
+  }
+
+  @media screen and (max-device-width: 1680px) {
+    transform: scale(0.8);
+  }
+
+  @media screen and (max-device-width: 1366px) {
+    transform: scale(0.6);
+  }
+}
+
+/* 背景色属性 */
+.bg-color(@color: @bg-color-white) {
+  background-color: @color;
+}
+
+/* border 属性 */
+.border(@width: 1px, @type: solid, @color: @border-color) {
+  border: @width @type @color;
+}
+
+/* 触摸样式 */
+.touch() {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* 背景图片 */
+.backgroundImg(@url; @size: 100% 100%; @repeat: no-repeat; @position: center) {
+  background-image: url(@url);
+  background-size: @size;
+  background-repeat: @repeat;
+  background-position: @position;
+}
+
+
+/* 字体垂直居中 */
+.centering(@align: center; @justify: center) {
+  display: flex;
+  align-items: @align;
+  justify-content: @justify;
+}
+
+/* 字体 */
+.fontSize(@color: #FFFFFF;@size; @family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Helvetica, "Hiragino Sans GB", "微软雅黑", Arial, sans-serif; @w: normal) {
+  color: @color;
+  font-size: @size / 16rem;
+  font-family: @family;
+  font-weight: @w;
+}
+
+/* 文字截断 */
+.text-overflow-ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/*transition动画函数定义*/
+.transition(@type: all; @time: .2s; @status: linear) {
+  -webkit-transition: @type @time @status;
+  -o-transition: @type @time @status;
+  transition: @type @time @status;
+}
+
+/* transform */
+.transform(@type) {
+  -webkit-transform: @type;
+  -moz-transform: @type;
+  -ms-transform: @type;
+  -o-transform: @type;
+  transform: @type;
+}
+
+/*boxshadow样式函数*/
+.shadow(@size1: 0; @size2: 0; @size3: 20px; @color: rgba(51, 51, 51, .4)) {
+  -webkit-box-shadow: @size1 @size2 @size3 @color;
+  -moz-box-shadow: @size1 @size2 @size3 @color;
+  box-shadow: @size1 @size2 @size3 @color;
+}
+
+/* 倒角函数 */
+.border-radius(@size: 5px;) {
+  -webkit-border-radius: @size;
+  border-radius: @size;
+}
+
+/*透明度函数*/
+.opacity (@size: 0.5;@size2: 50) {
+  filter: alpha(opacity=@size2);
+  -moz-opacity: @size;
+  -khtml-opacity: @size;
+  -webkit-opacity: @size;
+  opacity: @size;
+}
+
+/*字体库设置*/
+.iconfont(@size: 16px,@color: @bg-button-primary) {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  font-size: @size;
+  color: @color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*清浮动*/
+.cls-float() {
+  zoom: 1;
+  &:after {
+    content: '';
+    display: block;
+    width: 0;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
+  }
+}
+
+/* 上箭头样式 */
+.arrow-top(@dir: top;@size: 6px;@color:#999) {
+  width: 0;
+  height: 0;
+  border-bottom: solid @size @color;
+  border-left: solid @size transparent;
+  border-right: solid @size transparent;
+}
+
+;
+
+/* 下箭头样式 */
+.arrow-bottom(@size: 6px;@color:#999 ) {
+  width: 0;
+  height: 0;
+  border-top: solid @size @color;
+  border-left: solid @size transparent;
+  border-right: solid @size transparent;
+}
+
+/* 左箭头样式 */
+.arrow-left(@size: 6px;@color:#999 ) {
+  width: 0;
+  height: 0;
+  border-right: solid @size @color;
+  border-bottom: solid @size transparent;
+  border-top: solid @size transparent;
+}
+
+/* 右箭头样式 */
+.arrow-right(@size: 6px;@color:#999 ) {
+  width: 0;
+  height: 0;
+  border-left: solid @size @color;
+  border-bottom: solid @size transparent;
+  border-top: solid @size transparent;
+}
+
+/* 通用样式方法 ---end--- */
+

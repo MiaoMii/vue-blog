@@ -1,0 +1,151 @@
+/*********************************************************************
+ * base style less file
+ *********************************************************************/
+
+/* 全局页面通用配置 ----start----*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Helvetica, "Hiragino Sans GB", "微软雅黑", Arial, sans-serif;
+
+    &:before,
+    &:after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+
+html {
+    height: 100%;
+    font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Helvetica, "Hiragino Sans GB", "微软雅黑", Arial, sans-serif;
+    font-size: 16px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Helvetica, "Hiragino Sans GB", "微软雅黑", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    main,
+    menu,
+    nav,
+    section,
+    summary {
+        display: block;
+    }
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix() {
+    zoom: 1;
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+        visibility: hidden;
+        font-size: 0;
+        height: 0;
+    }
+}
+
+@media screen and (max-device-width: 1920px) {
+    html,
+    body {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-device-width: 1680px) {
+    html,
+    body {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-device-width: 1366px) {
+    html,
+    body {
+        font-size: 11px;
+    }
+}
+
+/* 全局页面通用配置 ----end----*/
+
+/* 滚动条样式重写 ---start--- */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+    border-radius: 10px;
+    z-index: 999;
+}
+
+::-webkit-scrollbar-track {
+    //-webkit-box-shadow: #fff;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #004e9e;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+::-webkit-scrollbar-thumb {
+    //background-color: #a5a5a5;
+    background-color: #004e9e;
+    //background-color: #5098f7;
+    border-radius: 10px;
+
+    &:hover {
+        //background-color: #5b5b5b;
+        background-color: #5098f7;
+    }
+}
+
+/* 滚动条样式重写 ---end--- */
+
+i {
+    font-style: normal;
+}
+
+
