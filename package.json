@@ -62,11 +62,14 @@
           "ObjectExpression": 1,
           "ImportDeclaration": 1,
           "flatTernaryExpressions": false,
-          "ignoredNodes": ["JSXElement", "JSXElement *"]
+          "ignoredNodes": [
+            "JSXElement",
+            "JSXElement *"
+          ]
         }
       ]
     },
-    "globals":{
+    "globals": {
       "$": true
     }
   },

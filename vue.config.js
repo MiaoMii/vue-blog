@@ -29,19 +29,5 @@ module.exports = {
                 path.resolve(__dirname, './src/assets/css/common.less')
             ]
         }
-    },
-    "eslintConfig": {
-        "root": true,
-        "env": {
-            "node": true
-        },
-        "extends": [
-            "plugin:vue/essential",
-            "eslint:recommended"
-        ],
-        "rules": {},
-        "parserOptions": {
-            "parser": "babel-eslint"
-        }
     }
 }
